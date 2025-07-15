@@ -1,0 +1,129 @@
+/* navbar */
+.navbar-menu {
+  background-color: #F0E7D5 !important; 
+  height: 80px;
+}
+
+/* logo */
+.logo img {
+  height: 60px;
+}
+
+/* dropdown */
+.navbar-menu .dropdown-toggle {
+  color: #333 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-menu .dropdown-menu {
+  background-color: #F0E7D5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-menu .dropdown-item {
+  color: #333 !important;
+  padding: 0.5rem 1.5rem;
+}
+
+.navbar-menu .dropdown-item:hover, 
+.navbar-menu .dropdown-item:focus {
+  background-color: #e6d9c2 !important;
+  color: #000 !important;
+}
+
+/* links normais */
+.navbar-menu .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-menu .nav-link:hover {
+  color: #000 !important;
+}
+
+/* accordion */
+section {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section .slide {
+  position: relative;
+  background-color: #e6d9c2;
+  height: 100vh;
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+section .slide:hover{
+  flex-grow: 5;
+}
+
+/* section .slide:nth-child(1) {
+  background-image: url('../imagens/');
+  background-size: cover;
+  background-position: center;
+} */
+
+.banner-accordion {
+  display: flex;
+  height: 70vh;
+  max-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.banner-panel {
+  flex: 1; /* Todos com o mesmo tamanho inicial */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.banner-panel.active {
+  flex: 3; /* Ajuste este valor para controlar o quanto expande */
+}
+
+.panel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.banner-panel:hover .panel-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-accordion {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+  
+  .banner-panel {
+    height: 80px; /* Tamanho uniforme em mobile */
+    flex: none;
+  }
+  
+  .banner-panel.active {
+    height: 200px; /* Tamanho expandido em mobile */
+    flex: none;
+  }
+}
