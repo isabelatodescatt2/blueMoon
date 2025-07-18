@@ -6,10 +6,10 @@ import "../App.css";
 // Dados de exemplo (substitua pelos seus)
 const avaliacoes = [
   {
-    nome: "Carlos Silva",
+    nome: "Bryan Dias",
     foto: "https://randomuser.me/api/portraits/men/32.jpg",
-    nota: 4.5,
-    comentario: "Aulas incríveis! A Lua transformou minha voz em apenas 2 meses. Recomendo demais!"
+    nota: 5,
+    comentario: "Estou muito satisfeito com a Blue Moon! Os professores são extremamente qualificados e atenciosos, e o ambiente da escola é acolhedor e inspirador. Comecei com aulas de canto há 6 meses e já percebo uma boa evolução, além de ter ganhado muita confiança. Recomendo para quem busca uma escola de música séria, mas com um toque pessoal e humano."
   },
   {
     nome: "Ana Paula",
@@ -18,10 +18,10 @@ const avaliacoes = [
     comentario: "Melhor professora que já tive! Didática perfeita e paciência de santa."
   },
   {
-    nome: "Roberto Nascimento",
+    nome: "Francisco Pazzini",
     foto: "https://randomuser.me/api/portraits/men/75.jpg",
     nota: 4,
-    comentario: "Estou evoluindo muito rápido. Ambiente super profissional!"
+    comentario: "Melhor aula de todas, a lua não poderia me ensinar melhor, graças a ela eu sei cantar todas as músicas do Guns and roses"
   }
 ];
 

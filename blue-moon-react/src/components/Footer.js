@@ -1,15 +1,12 @@
-import Contato from "./Contato";
-import DireitosAutorais from "./DireitosAutorais";
-import Mapa from "./Mapa";
+import LogoBege from '../imagens/marca/LogotipoBMBege.png'
 
 function Footer() {
   return (
-    <div>
-      <Contato />
-
-      <Mapa />
-
-      <DireitosAutorais />
+    <div className='footer'>
+      <img 
+        src={ LogoBege } 
+        alt='Logo Bege'
+      />
     </div>
   );
 }
