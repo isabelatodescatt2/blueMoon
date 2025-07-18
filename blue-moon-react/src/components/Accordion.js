@@ -10,14 +10,14 @@ import Imagem4 from "../imagens/accordion/4.png";
 import Imagem5 from "../imagens/accordion/5.png";
 
 const ImageBannerAccordion = () => {
-  const [hoverIndex, setHoverIndex] = useState(null); // Nenhum painel ativo inicialmente
+  const [hoverIndex, setHoverIndex] = useState(null); 
 
   const items = [
     {
       id: 1,
       image: Imagem1,
       altText: "Descrição imagem 1",
-      link: "/pagina1"
+      link: "/canto"
     },
     {
       id: 2,
@@ -46,7 +46,6 @@ const ImageBannerAccordion = () => {
   ];
 
   const handleClick = (link) => {
-    // Redireciona para a página ao clicar
     window.location.href = link;
     // Ou se estiver usando React Router:
     // navigate(link);

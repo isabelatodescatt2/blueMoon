@@ -1,11 +1,15 @@
 import React from "react";
 import Accordion from "../components/Accordion";
+import Avaliacoes from "../components/Avaliacoes";
+import AboutUs from "../components/AboutUs";
 
 
 const Home = () => {
 	return (
 		<div>
-			<Accordion/>			
+			<Accordion/>	
+			<Avaliacoes/>		
+			<AboutUs/>
 		</div>
 
 	);

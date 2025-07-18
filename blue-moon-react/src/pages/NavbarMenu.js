@@ -27,11 +27,11 @@ function NavbarMenu() {
               align="end"
               menuVariant="light"
             >
-              <NavDropdown.Item as={Link} to="/professor1">Lua Brunetti</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/canto">Lua Brunetti</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/professor2">Arthur Motta</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/professor3">Marco Duzzioni</NavDropdown.Item>
-			  <NavDropdown.Item as={Link} to="/professor3">João Amorim</NavDropdown.Item>
-			  <NavDropdown.Item as={Link} to="/professor3">Heitor Sens</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/professor3">João Amorim</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/professor3">Heitor Sens</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

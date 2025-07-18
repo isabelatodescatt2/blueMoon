@@ -127,3 +127,672 @@ section .slide:hover{
     flex: none;
   }
 }
+
+/* avaliações */
+.avaliacoes-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #212842;
+  font-weight: 600;
+}
+
+.card-avaliacao {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 0 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho-avaliacao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #212842;
+}
+
+.info-pessoa h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #212842;
+}
+
+.estrelas {
+  color: #FFD700;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.estrela-cheia, .estrela-meia {
+  color: #FFD700;
+}
+
+.estrela-vazia {
+  color: #ddd;
+}
+
+.comentario {
+  font-style: italic;
+  color: #555;
+  flex-grow: 1;
+  padding: 0 0.5rem;
+}
+
+/* Controles do carrossel */
+.carousel-control-next, 
+.carousel-control-prev {
+  width: 5%;
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+  background-color: #212842;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+/* about us section - imagem de fundo visível */
+.about-us {
+  background-image: linear-gradient(rgba(240, 231, 213, 0.5), rgba(240, 231, 213, 0.5)), url('./imagens/blue-moon/blue-moon-reunidos.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.about-us-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0 2rem;
+}
+
+.logo-wrapper {
+  margin-left: -4rem;
+}
+
+.about-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+}
+
+.about-text {
+  text-align: justify;
+  max-width: 600px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1E1E1E; 
+}
+
+.video-container {
+  position: relative;
+  margin-left: 2rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1px;
+  margin-top: -1.5rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Agendamento - Estilo Minimalista */
+.agendar-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(240, 231, 213, 0.85), rgba(240, 231, 213, 0.85)), 
+                    url('./imagens/blue-moon/blue-moon-reunidos.png');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  color: #212842;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
+
+.back-button:hover {
+  color: #171c2c;
+  transform: translateX(-3px);
+}
+
+.agendar-content {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo-img {
+  height: 170px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.agendar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1E1E1E;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+}
+
+.form-input {
+  padding: 0.7rem 1rem;
+  border: 2px solid #1E1E1E;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form-input::placeholder {
+  color: #1E1E1E;
+  opacity: 0.5;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #212842;
+}
+
+.form-row {
+  margin: 0 -0.3rem;
+}
+
+.form-row > Col {
+  padding: 0 0.3rem;
+}
+input[type="date"].form-input {
+  color: #212842;
+  position: relative;
+}
+
+input[type="date"].form-input::-webkit-datetime-edit {
+  color: #212842;
+}
+
+input[type="date"].form-input::-webkit-calendar-picker-indicator {
+  filter: invert(0.3) sepia(1) saturate(5) hue-rotate(175deg);
+  cursor: pointer;
+  padding: 0.2rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+input[type="date"].form-input::-webkit-calendar-picker-indicator:hover {
+  background: rgba(33, 40, 66, 0.1);
+}
+
+/* Personalização do Select */
+select.form-input {
+  color: #212842;
+}
+
+select.form-input option {
+  background: rgba(240, 231, 213, 0.95);
+  color: #1E1E1E;
+  padding: 0.5rem;
+}
+
+/* Para Firefox */
+select.form-input {
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+/* Para IE10+ */
+select.form-input::-ms-expand {
+  display: none;
+}
+
+input[type="date"].form-input::-webkit-calendar-picker-indicator {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E1E1E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1em;
+}
+
+.submit-button {
+  background: #212842;
+  color: #F0E7D5;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background: #171c2c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .agendar-content {
+    padding: 0.5rem;
+  }
+  
+  .logo-img {
+    height: 70px;
+  }
+  
+  .form-input {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .form-row > Col {
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-row > Col:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Modal de Confirmação */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmation-modal {
+  background: #F0E7D5;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #1E1E1E;
+}
+
+.modal-header {
+  border-bottom: 1px solid #1E1E1E;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  color: #212842;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  margin-bottom: 1.5rem;
+}
+
+.modal-body p {
+  margin-bottom: 0.5rem;
+  color: #1E1E1E;
+}
+
+.modal-details {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px dashed #1E1E1E;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.cancel-btn {
+  background: transparent;
+  color: #1E1E1E;
+  border-color: #1E1E1E;
+}
+
+.cancel-btn:hover {
+  background: rgba(30, 30, 30, 0.1);
+}
+
+.confirm-btn {
+  background: #212842;
+  color: #F0E7D5;
+}
+
+.confirm-btn:hover {
+  background: #171c2c;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .confirmation-modal {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* pagina de professores/aulas */
+/*Lua Brunetti*/
+/* Adicione no início do arquivo */
+.lua-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(0, 0, 0, 0.575) 100%
+  );
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Ajuste o z-index do conteúdo existente */
+.lua-container,
+.back-button {
+  position: relative;
+  z-index: 1;
+}
+.lua-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('./imagens/blue-moon/LuaFundo.png');
+  background-size: cover;
+  padding: 2rem 0;
+  color: white;
+  overflow: hidden;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  color: #212842;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.lua-container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  height: 100%;
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.lua-image-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.lua-image {
+  width: auto;
+  height: 100vh;
+  object-fit: contain;
+  margin-left: -5rem;
+}
+
+.info-col {
+  padding: 2rem;
+}
+
+.lua-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aula-title {
+  margin-top: -10rem;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+.lua-details h2 {
+  font-size: 1.8rem;
+  margin-top: -12rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.lua-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.lua-features li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.lua-features strong {
+  font-weight: 500;
+}
+
+.lua-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.lua-description p {
+  margin-bottom: 1rem;
+}
+
+.compact-text {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.compact-list {
+  margin-top: 0.5rem;
+}
+
+.compact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.lua-intro, 
+.lua-description {
+  margin-bottom: 1rem;
+}
+
+.lua-practical-info {
+  margin: 1.2rem 0;
+}
+
+.lua-practical-info p {
+  margin-bottom: 0.4rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .lua-title {
+    font-size: 2rem;
+  }
+  
+  .lua-details h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-col {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .info-col {
+    padding: 1rem;
+  }
+  
+  .lua-image {
+    max-height: 50vh;
+  }
+  
+  .lua-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .lua-container {
+    padding: 1rem;
+  }
+  
+  .lua-title {
+    font-size: 1.6rem;
+  }
+  
+  .lua-features li {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
