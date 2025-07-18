@@ -5,10 +5,10 @@ import "../App.css";
 
 const avaliacoes = [
   {
-    nome: "Carlos Silva",
+    nome: "Bryan Dias",
     foto: "https://randomuser.me/api/portraits/men/32.jpg",
     nota: 4.5,
-    comentario: "Aulas incríveis! A Lua transformou minha voz em apenas 2 meses. Recomendo demais!"
+    comentario: "Estou muito satisfeito com a Blue Moon! Os professores são extremamente qualificados e atenciosos, e o ambiente da escola é acolhedor e inspirador. Comecei com aulas de canto há 6 meses e já percebo uma boa evolução, além de ter ganhado muita confiança. Recomendo para quem busca uma escola de música séria, mas com um toque pessoal e humano."
   },
   {
     nome: "Ana Paula",
