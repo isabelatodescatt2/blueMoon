@@ -2,12 +2,14 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import "../App.css";
+import BryanPNG from "../imagens/avaliacoes/bryannnnnn.jpg";
+import FranciscoPNG from "../imagens/avaliacoes/fran.jpg";
 
 // Dados de exemplo (substitua pelos seus)
 const avaliacoes = [
   {
     nome: "Bryan Dias",
-    foto: "https://randomuser.me/api/portraits/men/32.jpg",
+    foto: BryanPNG,
     nota: 5,
     comentario: "Estou muito satisfeito com a Blue Moon! Os professores são extremamente qualificados e atenciosos, e o ambiente da escola é acolhedor e inspirador. Comecei com aulas de canto há 6 meses e já percebo uma boa evolução, além de ter ganhado muita confiança. Recomendo para quem busca uma escola de música séria, mas com um toque pessoal e humano."
   },
@@ -19,7 +21,7 @@ const avaliacoes = [
   },
   {
     nome: "Francisco Pazzini",
-    foto: "https://randomuser.me/api/portraits/men/75.jpg",
+    foto: FranciscoPNG,
     nota: 4,
     comentario: "Melhor aula de todas, a lua não poderia me ensinar melhor, graças a ela eu sei cantar todas as músicas do Guns and roses"
   }

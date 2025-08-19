@@ -4,12 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaCheck, FaTimes } from "react-icons/fa";
 import "../App.css";
 
+// Importar o serviço de API
+import { agendaService } from "../services/api";
+
 // Assets
 import Logo from "../imagens/marca/LogotipoBMBlueV2.png";
 
 const Agendamento = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -31,18 +35,39 @@ const Agendamento = () => {
     }));
   };
 
-  const handleConfirm = () => {
-    console.log('Dados enviados:', formData);
-    setShowModal(false);
+  const handleConfirm = async () => {
+    setLoading(true);
     
-    //Resetar formulário
-    setFormData({
-      nome: '',
-      email: '',
-      nascimento: '',
-      aula: '',
-      mensagem: ''
-    });
+    try {
+      // Enviar dados para o backend
+      await agendaService.agendarAula(formData);
+      
+      console.log('Dados enviados com sucesso:', formData);
+      
+      // Fechar modal após sucesso
+      setShowModal(false);
+      
+      // Resetar formulário
+      setFormData({
+        nome: '',
+        email: '',
+        nascimento: '',
+        aula: '',
+        mensagem: ''
+      });
+      
+      // Mostrar mensagem de sucesso (você pode implementar um toast/alert)
+      alert('Aula agendada com sucesso! Entraremos em contato em breve.');
+      
+      // Opcional: redirecionar para a página inicial
+      // navigate('/');
+      
+    } catch (error) {
+      console.error('Erro ao agendar aula:', error);
+      alert('Erro ao agendar aula. Tente novamente.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -119,7 +144,21 @@ const Agendamento = () => {
                 </select>
               </div>
             </Col>
-          </Row><br></br>
+          </Row>
+          
+          <div className="form-group">
+            <label htmlFor="mensagem">Mensagem (Opcional)</label>
+            <textarea 
+              id="mensagem" 
+              className="form-input" 
+              placeholder="Alguma observação ou dúvida?"
+              rows="3"
+              value={formData.mensagem}
+              onChange={handleInputChange}
+            />
+          </div>
+          
+          <br />
           <button type="submit" className="submit-button">
             Agendar Aula
           </button>
@@ -145,14 +184,20 @@ const Agendamento = () => {
                 <button 
                   className="modal-btn cancel-btn"
                   onClick={() => setShowModal(false)}
+                  disabled={loading}
                 >
                   <FaTimes /> Cancelar
                 </button>
                 <button 
                   className="modal-btn confirm-btn"
                   onClick={handleConfirm}
+                  disabled={loading}
                 >
-                  <FaCheck /> Confirmar
+                  {loading ? (
+                    <>Enviando...</>
+                  ) : (
+                    <><FaCheck /> Confirmar</>
+                  )}
                 </button>
               </div>
             </div>
