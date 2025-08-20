@@ -1,5 +1,6 @@
 [build]
-  publish = "build"
+  base = "blue-moon-react"
+  publish = "blue-moon-react/build"
   command = "npm run build"
 
 [[redirects]]
