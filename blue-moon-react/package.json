@@ -26,6 +26,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "build:netlify": "craco build"
   },
   "eslintConfig": {
