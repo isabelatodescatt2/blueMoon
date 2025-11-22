@@ -20,17 +20,17 @@ jobs:
         
     - name: Install dependencies
       run: |
-        cd blueMoon
+        cd blue-moon-react
         npm install
       
     - name: Build project
       run: |
-        cd blueMoon
+        cd blue-moon-react
         npm run build
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./blueMoon/dist
+        publish_dir: ./blue-moon-react/dist
         force_orphan: true
