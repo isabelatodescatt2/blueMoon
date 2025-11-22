@@ -19,14 +19,18 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd blueMoon
+        npm install
       
     - name: Build project
-      run: npm run build
+      run: |
+        cd blueMoon
+        npm run build
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./blueMoon/dist
         force_orphan: true
