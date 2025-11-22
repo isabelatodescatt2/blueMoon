@@ -7,7 +7,7 @@ import "../App.css";
 // Importar o serviço de API
 import { agendaService } from "../services/api";
 
-// Assets
+// Assets - CORRIGIDO
 import Logo from "../imagens/marca/LogotipoBMBlueV2.png";
 
 const Agendamento = () => {
@@ -70,7 +70,7 @@ const Agendamento = () => {
     }
   };
 
-  return (
+ return (
     <div className="agendar-wrapper">
       <button 
         onClick={() => navigate(-1)} 
@@ -82,7 +82,7 @@ const Agendamento = () => {
 
       <div className="agendar-content">
         <div className="logo-container">
-          <img src={Logo} alt="Blue Moon School of Jazz" className="logo-img" />
+          <img src={Logo} alt="Blue Moon School of Jazz" className="logo-img" /> 
         </div>
 
         <form className="agendar-form" onSubmit={handleSubmit}>
