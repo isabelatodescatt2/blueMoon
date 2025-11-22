@@ -32,5 +32,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./blue-moon-react/dist
+        publish_dir: ./blue-moon-react/build  # ← MUDEI PARA build
         force_orphan: true
