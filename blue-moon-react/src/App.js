@@ -24,7 +24,7 @@ const SimpleLayout = ({ children }) => (
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/blueMoon">  {/* ← ADICIONE ESTA LINHA */}
       <Routes>
         {/* Rotas com layout simples */}
         <Route path="/aprender" element={
