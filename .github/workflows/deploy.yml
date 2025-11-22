@@ -55,3 +55,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+        - name: Build project
+  run: |
+    cd blue-moon-react
+    npm run build
+
+- name: Verify assets
+  run: |
+    echo "Listando arquivos buildados:"
+    find blue-moon-react/dist -name "*.png" -o -name "*.jpg" | head -10
+    echo "Estrutura da pasta dist:"
+    ls -la blue-moon-react/dist/
