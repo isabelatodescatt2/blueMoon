@@ -24,7 +24,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "vite build && node fix-assets.js",
+    "postbuild": "node fix-assets.js"
     "test": "craco test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
