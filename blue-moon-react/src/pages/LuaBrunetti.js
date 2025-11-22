@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import "../App.css";
+
+// Assets 
 import LuaPNG from "../imagens/blue-moon/LuaPNG.png";
 import CantoTitulo from "../imagens/blue-moon/CantoTitulo.png";
 
@@ -24,7 +26,7 @@ const LuaBrunetti = () => {
           <Col lg={4} md={6} className="image-col">
             <div className="lua-image-container">
               <img 
-                src={LuaPNG} 
+                src={LuaPNG}  
                 alt="Lua Brunetti" 
                 className="lua-image"
               />
@@ -34,7 +36,7 @@ const LuaBrunetti = () => {
           <Col lg={8} md={6} className="info-col">
             <div className="lua-content">
               <img 
-                src={CantoTitulo} 
+                src={CantoTitulo}  
                 alt="Aula de Canto" 
                 className="aula-title"
               />
