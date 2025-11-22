@@ -7,6 +7,6 @@ Logo apos baixar o prisma rode o back-end de forma sequencial do codigo
 
 Integrantes:
 
-– Diego Cordeiro de Souza 
-– Isabela dos Santos Todescatt 
-– Luana Brunetti de Oliveira 
+– Diego Cordeiro de Souza <br>
+– Isabela dos Santos Todescatt <br> 
+– Luana Brunetti de Oliveira <br>
