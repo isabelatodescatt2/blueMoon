@@ -1,14 +1,15 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
+// import { FaArrowLeft } from "react-icons/fa";
 import "../App.css";
 
 // Assets
 import Logo from "../imagens/marca/LogotipoBMBlue.png";
 
 const AboutUs = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <section className="about-us">
