@@ -24,12 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd frontend
+          cd blue-moon-react
           npm install
 
       - name: Build project
         run: |
-          cd frontend
+          cd blue-moon-react
           npm run build
 
       - name: Setup Pages
@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend/build
+          path: ./blue-moon-react/build
 
   deploy:
     environment:
