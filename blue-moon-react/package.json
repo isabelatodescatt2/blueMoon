@@ -3,8 +3,6 @@
   "homepage": "https://isabelatodescatt2.github.io/blueMoon",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
-  "proxy": "http://localhost:3000",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -13,7 +11,6 @@
     "axios": "^1.11.0",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
-    "node": "^20.19.4",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.1.0",
@@ -23,16 +20,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "dev": "vite",
-    "build": "vite build && node fix-assets.js",
-    "preview": "vite preview",
-    "postbuild": "node fix-assets.js"
-    "test": "craco test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:netlify": "craco build"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
-    "cross-env": "^10.0.0"
+    "gh-pages": "^6.1.1"
   }
 }
