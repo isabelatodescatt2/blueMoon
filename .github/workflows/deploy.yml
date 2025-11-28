@@ -1,8 +1,9 @@
-name: Deploy React App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,34 +17,29 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: blue-moon-react
-        
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: "18"
-        cache: 'npm'
-        cache-dependency-path: 'blue-moon-react/package-lock.json'
-    
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Build project
-      run: npm run build
-      
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: blue-moon-react/build
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     environment:
@@ -55,15 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-        - name: Build project
-  run: |
-    cd blue-moon-react
-    npm run build
-
-- name: Verify assets
-  run: |
-    echo "Listando arquivos buildados:"
-    find blue-moon-react/dist -name "*.png" -o -name "*.jpg" | head -10
-    echo "Estrutura da pasta dist:"
-    ls -la blue-moon-react/dist/
