@@ -24,7 +24,9 @@
   },
   "scripts": {
     "start": "craco start",
+    "dev": "vite",
     "build": "vite build && node fix-assets.js",
+    "preview": "vite preview",
     "postbuild": "node fix-assets.js"
     "test": "craco test",
     "predeploy": "npm run build",
